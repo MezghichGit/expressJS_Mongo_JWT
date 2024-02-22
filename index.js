@@ -23,7 +23,7 @@ app.listen(
 
 // 2) connexion de notre serveur à la base mongo
 const MongoClient = require('mongodb').MongoClient;
-const url = 'mongodb://localhost:27017';
+const url = 'mongodb://localhost:27017';  // ou 127.0.0.1 pour certains
 const dbName = 'monapi';
 
 
@@ -47,7 +47,7 @@ app.post('/token/sign', (req, res) => {
     if((credentials.email==="amine.mezghich@gmail.com") && (credentials.password==="1234")){
     // vérifier si un user admet le login et le mot de passe
     var userData = {
-        "name": "Amine Mezghich",
+        "name": "Mohamed Amine Mezghich",
         "id": "1234",
         "Poste actuel":"Formateur Senior en IT",
         "role":"Chef de projet"
